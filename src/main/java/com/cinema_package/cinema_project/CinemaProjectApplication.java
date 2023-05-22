@@ -4,7 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.time.LocalDate;
+
 
 @SpringBootApplication
 @RestController
@@ -16,10 +17,12 @@ public class CinemaProjectApplication {
 	}
 
 	record NewMovieRequest(
-		String description,
-		String director,
-		String genre,
-		String title
+			String description,
+			String director,
+			String genre,
+			String title,
+			LocalDate date,
+			String location
 	){}
 
 }
