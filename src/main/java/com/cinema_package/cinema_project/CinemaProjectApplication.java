@@ -27,6 +27,4 @@ public class CinemaProjectApplication {
 		int availableSeats
 		){}
 
-
-
 }

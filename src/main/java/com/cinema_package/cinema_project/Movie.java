@@ -30,16 +30,17 @@ public class Movie {
 
     public Movie(int id, String title, String director, String description, String genre, LocalDate date,
                  String location, int totalSeats, int availableSeats) {
-        this.id = id;
-        this.title = title;
-        this.director = director;
-        this.description = description;
-        this.genre = genre;
-        this.date = date;
-        this.location = location;
-        this.totalSeats = totalSeats;
-        this.availableSeats = availableSeats;
-    }
+            this.id = id;
+            this.title = title;
+            this.director = director;
+            this.description = description;
+            this.genre = genre;
+            this.date = date;
+            this.location = location;
+            this.totalSeats = totalSeats;
+            this.availableSeats = availableSeats;
+        }
+
     public Movie() {}
 
     public int getId() {return id;}
@@ -78,4 +79,5 @@ public class Movie {
     public int getAvailableSeats() {return availableSeats;}
 
     public void setAvailableSeats(int availableSeats) {this.availableSeats = availableSeats;}
+
 }

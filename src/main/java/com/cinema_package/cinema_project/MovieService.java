@@ -43,7 +43,7 @@ public class MovieService {
     }
     @GetMapping
     public List<Movie> getAllMovies(String title, LocalDate date, String location, String genre) {
-        if (title == null && date == null && location == null) {
+        if (title == null && date == null && location == null && genre == null) {
             return movieRepository.findAll();
         } else {
             return filterMovies(title, date, location, genre);
@@ -55,7 +55,6 @@ public class MovieService {
         return movieRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid movie ID: " + id));
     }
-
 
     @GetMapping("/booking/history")
     public List<BookingHistory> getBookingHistory() {
@@ -81,8 +80,6 @@ public class MovieService {
         return bookingHistory;
     }
 
-
-
     @PostMapping
     public void addMovie(@RequestBody CinemaProjectApplication.NewMovieRequest request) {
         Movie movie = new Movie();
@@ -96,7 +93,6 @@ public class MovieService {
         movie.setAvailableSeats(request.availableSeats());
         movieRepository.save(movie);
     }
-
 
     @DeleteMapping("{movieId}")
     public void deleteMovie(@PathVariable("movieId") Integer id){
