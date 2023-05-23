@@ -65,6 +65,8 @@ public class MovieService {
             int bookedTickets = movie.getTotalSeats() - movie.getAvailableSeats();
 
             if (bookedTickets > 0) {
+                int totalPrice = bookedTickets * movie.getPrice();
+
                 BookingHistory booking = new BookingHistory();
                 booking.setId(movie.getId());
                 booking.setTitle(movie.getTitle());
@@ -74,10 +76,37 @@ public class MovieService {
                 booking.setDate(movie.getDate());
                 booking.setLocation(movie.getLocation());
                 booking.setBookedTickets(bookedTickets);
+                booking.setTotalPrice(totalPrice);
                 bookingHistory.add(booking);
             }
         }
         return bookingHistory;
+    }
+
+
+
+    @PostMapping("/booking/{movieId}/{tickets}/{payment}")
+    public void bookTickets(
+            @PathVariable("movieId") Integer id,
+            @PathVariable("tickets") Integer tickets,
+            @PathVariable("payment") Integer payment
+    ) {
+        Movie movie = getMovieById(id);
+
+        int availableSeats = movie.getAvailableSeats();
+        if (tickets > availableSeats) {
+            throw new IllegalArgumentException("No seats available at this time.");
+        }
+
+        int calculatedTotalPrice = tickets * movie.getPrice();
+        if (!payment.equals(calculatedTotalPrice)) {
+            throw new IllegalArgumentException("Invalid total price.");
+        }
+
+        availableSeats -= tickets;
+        movie.setAvailableSeats(availableSeats);
+
+        movieRepository.save(movie);
     }
 
     @PostMapping
@@ -91,10 +120,11 @@ public class MovieService {
         movie.setLocation(request.location());
         movie.setTotalSeats(request.totalSeats());
         movie.setAvailableSeats(request.availableSeats());
+        movie.setPrice(request.price());
         movieRepository.save(movie);
     }
 
-    @DeleteMapping("{movieId}")
+        @DeleteMapping("{movieId}")
     public void deleteMovie(@PathVariable("movieId") Integer id){
         Movie movie = movieRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid movie ID: " + id));
@@ -117,23 +147,7 @@ public class MovieService {
         movie.setLocation(request.location());
         movie.setTotalSeats(request.totalSeats());
         movie.setAvailableSeats(request.availableSeats());
+        movie.setPrice(request.price());
         movieRepository.save(movie);
     }
-
-    @PostMapping("/booking/{movieId}/{quantity}")
-    public void bookTickets(@PathVariable ("movieId") Integer id,
-                            @PathVariable("quantity") Integer quantity) {
-        Movie movie = getMovieById(id);
-
-        int availableSeats = movie.getAvailableSeats();
-        if (quantity > availableSeats) {
-            throw new IllegalArgumentException("No seats available at this time.");
-        }
-
-        availableSeats -= quantity;
-        movie.setAvailableSeats(availableSeats);
-        movieRepository.save(movie);
-    }
-
-
 }

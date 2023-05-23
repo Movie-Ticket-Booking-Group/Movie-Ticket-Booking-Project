@@ -11,9 +11,11 @@ public class BookingHistory {
         private LocalDate date;
         private String location;
         private int bookedTickets;
+        private int totalPrice;
 
 
-    public BookingHistory(int id, String title, String director, String description, String genre, LocalDate date, String location, int bookedTickets) {
+
+    public BookingHistory(int id, String title, String director, String description, String genre, LocalDate date, String location, int bookedTickets, int totalPrice) {
         this.id = id;
         this.title = title;
         this.director = director;
@@ -22,6 +24,7 @@ public class BookingHistory {
         this.date = date;
         this.location = location;
         this.bookedTickets = bookedTickets;
+        this.totalPrice = totalPrice;
     }
 
     public BookingHistory() {}
@@ -57,6 +60,10 @@ public class BookingHistory {
         public int getBookedTickets() {return bookedTickets;}
 
         public void setBookedTickets(int bookedTickets) {this.bookedTickets = bookedTickets;}
+
+        public int getTotalPrice() {return totalPrice;}
+
+        public void setTotalPrice(int totalPrice) {this.totalPrice = totalPrice;}
 }
 
 

@@ -27,9 +27,10 @@ public class Movie {
     private String location;
     private int totalSeats;
     private int availableSeats;
+    private int price;
 
     public Movie(int id, String title, String director, String description, String genre, LocalDate date,
-                 String location, int totalSeats, int availableSeats) {
+                 String location, int totalSeats, int availableSeats, int price) {
             this.id = id;
             this.title = title;
             this.director = director;
@@ -39,6 +40,7 @@ public class Movie {
             this.location = location;
             this.totalSeats = totalSeats;
             this.availableSeats = availableSeats;
+            this.price = price;
         }
 
     public Movie() {}
@@ -80,4 +82,7 @@ public class Movie {
 
     public void setAvailableSeats(int availableSeats) {this.availableSeats = availableSeats;}
 
+    public int getPrice() {return price;}
+
+    public void setPrice(int price) {this.price = price;}
 }

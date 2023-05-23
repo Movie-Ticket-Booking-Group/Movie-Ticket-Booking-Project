@@ -24,7 +24,8 @@ public class CinemaProjectApplication {
 		LocalDate date,
 		String location,
 		int totalSeats,
-		int availableSeats
+		int availableSeats,
+		int price
 		){}
 
 }

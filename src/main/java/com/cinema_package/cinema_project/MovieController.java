@@ -40,12 +40,13 @@ public class MovieController {
         movieService.addMovie(movie);
     }
 
-    @PostMapping("/booking/{movieId}/{quantity}")
+    @PostMapping("/booking/{movieId}/{quantity}/{totalPrice}")
     public void createBooking(
             @PathVariable("movieId") Integer id,
-            @PathVariable("quantity") Integer quantity
+            @PathVariable("quantity") Integer quantity,
+            @PathVariable("totalPrice") Integer totalPrice
     ) {
-        movieService.bookTickets(id, quantity);
+        movieService.bookTickets(id, quantity, totalPrice);
     }
     @DeleteMapping("/{movieId}")
     public void deleteMovie(@PathVariable("movieId") Integer id) {
