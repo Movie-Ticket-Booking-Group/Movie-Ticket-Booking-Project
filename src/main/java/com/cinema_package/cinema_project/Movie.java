@@ -1,6 +1,9 @@
 package com.cinema_package.cinema_project;
 
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDate;
 
 @Entity
 @Table
@@ -20,66 +23,59 @@ public class Movie {
     private String director;
     private String description;
     private String genre;
+    private LocalDate date;
+    private String location;
+    private int totalSeats;
+    private int availableSeats;
 
-    public Movie(int id, String title, String director, String description, String genre) {
+    public Movie(int id, String title, String director, String description, String genre, LocalDate date,
+                 String location, int totalSeats, int availableSeats) {
         this.id = id;
         this.title = title;
         this.director = director;
         this.description = description;
         this.genre = genre;
+        this.date = date;
+        this.location = location;
+        this.totalSeats = totalSeats;
+        this.availableSeats = availableSeats;
     }
     public Movie() {}
 
-    public int getId() {
-        return id;
-    }
+    public int getId() {return id;}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id) {this.id = id;}
 
-    public String getTitle() {
-        return title;
-    }
+    public String getTitle() {return title;}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setTitle(String title) {this.title = title;}
 
-    public String getDirector() {
-        return director;
-    }
+    public String getDirector() {return director;}
 
-    public void setDirector(String director) {
-        this.director = director;
-    }
+    public void setDirector(String director) {this.director = director;}
 
-    public String getDescription() {
-        return description;
-    }
+    public String getDescription() {return description;}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    public void setDescription(String description) {this.description = description;}
 
-    public String getGenre() {
-        return genre;
-    }
+    public String getGenre() {return genre;}
 
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
+    public void setGenre(String genre) {this.genre = genre;}
 
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    public LocalDate getDate() {return date;}
 
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", director='" + director + '\'' +
-                ", description='" + description + '\'' +
-                ", genre='" + genre + '\'' +
-                '}';
-    }
+    public void setDate(LocalDate date) {this.date = date;}
 
+    public String getLocation() {return location;}
+
+    public void setLocation(String location) {this.location = location;}
+
+    public int getTotalSeats() {return totalSeats;}
+
+    public void setTotalSeats(int totalSeats) {this.totalSeats = totalSeats;}
+
+    public int getAvailableSeats() {return availableSeats;}
+
+    public void setAvailableSeats(int availableSeats) {this.availableSeats = availableSeats;}
 }
