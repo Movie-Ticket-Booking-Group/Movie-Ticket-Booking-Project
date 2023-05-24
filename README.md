@@ -13,6 +13,7 @@ This is a project created by two students with a goal to develop a backend syste
 Java,
 Spring Boot,
 Spring Data JPA,
+Postman,
 PostgreSQL Database and
 Docker
 
