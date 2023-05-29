@@ -1,0 +1,130 @@
+{
+  "id": 1,
+  "title": "Inception",
+  "director": "Christopher Nolan",
+  "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+  "genre": "Action, Adventure, Sci-Fi",
+  "date": "2023-09-05",
+  "location": "Metroplex",
+  "totalSeats": 200,
+  "availableSeats": 200,
+  "price": 50
+}
+
+{
+  "id": 2,
+  "title": "The Matrix",
+  "director": "Lana Wachowski",
+  "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+  "genre": "Action, Sci-Fi",
+  "date": "2023-09-12",
+  "location": "Cineplexx",
+  "totalSeats": 180,
+  "availableSeats": 180,
+  "price": 50
+}
+
+{
+  "id": 3,
+  "title": "Fight Club",
+  "director": "David Fincher",
+  "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+  "genre": "Drama",
+  "date": "2023-09-21",
+  "location": "Cineworld",
+  "totalSeats": 150,
+  "availableSeats": 150,
+  "price": 50
+}
+
+{
+  "id": 4,
+  "title": "The Avengers",
+  "director": "Joss Whedon",
+  "description": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
+  "genre": "Action, Adventure, Sci-Fi",
+  "date": "2023-09-28",
+  "location": "Metroplex",
+  "totalSeats": 220,
+  "availableSeats": 220,
+  "price": 50
+}
+
+{
+  "id": 5,
+  "title": "The Shawshank Redemption",
+  "director": "Frank Darabont",
+  "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+  "genre": "Drama",
+  "date": "2023-10-05",
+  "location": "Cineplexx",
+  "totalSeats": 190,
+  "availableSeats": 190,
+  "price": 50
+}
+
+{
+  "id": 6,
+  "title": "Interstellar",
+  "director": "Christopher Nolan",
+  "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+  "genre": "Adventure, Drama, Sci-Fi",
+  "date": "2023-10-12",
+  "location": "Cineworld",
+  "totalSeats": 210,
+  "availableSeats": 210,
+  "price": 50
+}
+
+{
+  "id": 7,
+  "title": "The Dark Knight",
+  "director": "Christopher Nolan",
+  "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham City, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+  "genre": "Action, Crime, Drama",
+  "date": "2023-10-19",
+  "location": "Metroplex",
+  "totalSeats": 200,
+  "availableSeats": 200,
+  "price": 50
+}
+
+{
+  "id": 8,
+  "title": "Forrest Gump",
+  "director": "Robert Zemeckis",
+  "description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold through the perspective of an Alabama man with an IQ of 75.",
+  "genre": "Drama, Romance",
+  "date": "2023-10-26",
+  "location": "Cineplexx",
+  "totalSeats": 180,
+  "availableSeats": 180,
+  "price": 50
+}
+
+{
+  "id": 9,
+  "title": "The Godfather",
+  "director": "Francis Ford Coppola",
+  "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+  "genre": "Crime, Drama",
+  "date": "2023-11-02",
+  "location": "Cineworld",
+  "totalSeats": 170,
+  "availableSeats": 170,
+  "price": 50
+}
+
+{
+  "id": 10,
+  "title": "The Grand Budapest Hotel",
+  "director": "Wes Anderson",
+  "description": "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
+  "genre": "Adventure, Comedy, Drama",
+  "date": "2023-11-30",
+  "location": "Cineplexx",
+  "totalSeats": 180,
+  "availableSeats": 180,
+  "price": 50
+}
+
